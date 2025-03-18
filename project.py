@@ -11,18 +11,24 @@ Project : Multiple Choice Quiz
 Due Date: 23.03.2025  23:59
 
 Features:
+- Secure login system with username and password verification.
 - Includes an ASCII logo for improved UI.
 - Uses terminal colors for better readability.
-- Ensures only valid user input is accepted.
-- Provides summary of incorrect answers.
+- Ensures only valid user input is accepted (login and quiz).
+- Asks 10 multiple-choice questions about Norway.
+- Handles invalid answers by prompting user until a valid choice is given.
+- Displays the number of correct and incorrect answers at the end.
+- Provides a detailed summary of incorrect answers (question, user response, correct answer).
 
 Guidelines:
-- Uses only covered Python topics (dictionaries, loops, functions).
-- No OOP or advanced modules.
-- Submission required as a single Python file.
+- Follows the exact project requirements, including login validation, quiz flow, and result summary.
+- Uses only approved Python topics (dictionaries, loops, functions, input handling).
+- Ensures correct error handling and input validation to prevent crashes.
+- No object-oriented programming (OOP) or external libraries used.
+- The entire program is contained in a single Python file for submission.
+
 =========================================================
 """
-
 
 
 COLORS = {
