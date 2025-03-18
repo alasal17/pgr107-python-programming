@@ -183,3 +183,5 @@ def main():
         print(colorText(f"\n🎉 [[cyan]]Login successful! Starting the quiz now...[[reset]]\n"))
         quiz_logic()  # Start the quiz
 
+if __name__ == "__main__":
+    main()
