@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>{{ terminal_style | safe }}</style>
+</head>
+<body>
+    <h1>🎯 Question {{ question_id }}</h1>
+    <p>{{ question["question"] }}</p>
+    <form method="POST">
+        {% for key, value in question["options"].items() %}
+            <input type="radio" name="answer" value="{{ key }}" required> {{ key }}. {{ value }}<br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

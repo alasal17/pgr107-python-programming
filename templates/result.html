@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style>{{ terminal_style | safe }}</style>
+</head>
+<body>
+    <h1>🎯 Quiz Complete!</h1>
+    <p>✅ Correct answers: {{ correct }}/10</p>
+    <p>❌ Incorrect answers: {{ incorrect|length }}/10</p>
+
+    {% if incorrect %}
+        <h2>📌 Incorrect Answers Summary:</h2>
+        {% for error in incorrect %}
+            <p>📖 {{ error["question"] }}</p>
+            <p>❌ Your answer: {{ error["your_answer"] }}</p>
+            <p>✅ Correct answer: {{ error["correct_answer"] }}</p>
+            <hr>
+        {% endfor %}
+    {% endif %}
+
+    <a href="{{ url_for('logout') }}"><button>Restart Quiz</button></a>
+</body>
+</html>
