@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-import project  # Importerer din eksisterende quiz-logikk
+import project 
+import os
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"  # Nødvendig for å håndtere session
+app.secret_key = "supersecretkey"
 
-# Simulerer en terminal-stil med CSS
 terminal_style = """
 body {
     background-color: black;
@@ -94,6 +94,6 @@ def logout():
     session.clear()
     return redirect(url_for("login"))
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
